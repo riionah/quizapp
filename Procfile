@@ -1,0 +1,1 @@
+web: cd servera && gunicorn app:app
