@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from servera.extensions import db
-from models.quiz import Quiz, Question, Option, Result, Leaderboard
+from servera.models.quiz import Quiz, Question, Option, Result, Leaderboard
 import random
 
 quiz_bp = Blueprint("quiz", __name__)

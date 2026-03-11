@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
 from servera.extensions import db
-from models.quiz import Quiz,Question, Option
+from servera.models.quiz import Quiz,Question, Option
 
 admin_bp = Blueprint("admin", __name__)
 
