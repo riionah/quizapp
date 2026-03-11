@@ -2,8 +2,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from flask import Flask
-from config import Config
-from extensions import db, jwt
+from servera.config import Config
+from servera.extensions import db, jwt
 
 def create_app():
     app = Flask(__name__)
@@ -13,9 +13,9 @@ def create_app():
     jwt.init_app(app)
 
     # Import routes
-    from routes.authroutes import auth_bp
-    from routes.qiuzroutes import quiz_bp
-    from routes.admin import admin_bp
+from servera.routes.authroutes import auth_bp
+from servera.routes.qiuzroutes import quiz_bp
+from servera.routes.admin import admin_bp
 
     app.register_blueprint(auth_bp, url_prefix="/api/auth")
     app.register_blueprint(quiz_bp, url_prefix="/api/quiz")
